@@ -1,0 +1,67 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "AccessToken": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongodb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "mongodb",
+    "public": false
+  },
+  "MomentumUser": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "CompanyService": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Partner": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Conference": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "Feedback": {
+    "dataSource": "mongodb",
+    "public": true
+  },
+  "tag": {
+    "dataSource": "mongodb",
+    "public": true
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "name": "MomentumUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string",
+      "required": true,
+      "default": "y"
+    },
+    "socialLinks": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "image": {
+      "type": "string"
+    },
+    "about": {
+      "type": "string"
+    },
+    "companiesWorkingIn": {
+      "type": [
+        "object"
+      ]
+    },
+    "interests": {
+      "type": [
+        "string"
+      ]
+    }
+  },
+  "validations": [],
+  "relations": {
+    "companies": {
+      "type": "hasMany",
+      "model": "Company",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

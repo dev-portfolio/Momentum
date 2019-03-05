@@ -1,0 +1,80 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "teamMembers": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "image": {
+      "type": "string"
+    },
+    "isActive": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "cityId": {
+      "type": "string",
+      "required": true
+    },
+    "socialLinks": {
+      "type": [
+        "object"
+      ],
+      "required": true
+    },
+    "slug": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "required": true
+    },
+    "isVerified": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "created": {
+      "type": "date",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "companyServices": {
+      "type": "hasMany",
+      "model": "CompanyService",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
